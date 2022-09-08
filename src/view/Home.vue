@@ -1,8 +1,5 @@
 <template>
-    <div class="top-nav">
-        <div class="log"></div>
-        <div class="menu"></div>
-    </div>
+    <Topnav />
     <div class="banner">
         <h1>txy-ui</h1>
         <h2>一款简单的UI</h2>
@@ -12,9 +9,10 @@
 </template>
 
 <script>
+import Topnav from "./Topnav.vue";
 export default {
-    name: 'Home'
-
+    name: "Home",
+    components: { Topnav }
 }
 </script>
 
