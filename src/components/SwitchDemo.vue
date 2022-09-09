@@ -2,13 +2,18 @@
       <div>
         Switch文档
     </div>
-    <Switch/>
+    <Switch v-model:value="y" />
 </template>
 
 <script lang="ts">
-    import Switch from "../lib/Switch.vue";
+    import { ref } from "vue";
+import Switch from "../lib/Switch.vue";
     export default {
-        components: { Switch }
+        components: { Switch },
+        setup(){
+            const y=ref(false)
+            return {y}
+        }
         
     }
 </script>
