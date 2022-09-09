@@ -1,62 +1,14 @@
-<template>
-    <div>
+<template> 
+      <div>
         Switch文档
     </div>
-    <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div> <div>
-        Switch文档
-    </div>
+    <Switch/>
 </template>
 
-<script>
+<script lang="ts">
+    import Switch from "../lib/Switch.vue";
     export default {
+        components: { Switch }
         
     }
 </script>
