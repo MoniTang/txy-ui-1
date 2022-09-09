@@ -19,7 +19,7 @@
                 </li>
             </ol>
         </aside>
-        <main>主内容</main>
+        <main><router-view/></main>
     </div>
 </template>
 
@@ -29,29 +29,38 @@ import Topnav from '../components/Topnav.vue';
 export default {
     components: { Topnav },
     setup() {
-        const asideVisible = inject('asideVisible')
+        const asideVisible = inject<Ref<boolean>>('asideVisible')
         return { asideVisible }
     }
 }
 </script>
 
 <style lang="scss" scoped>
+.content{
+        height: 100vh;
+        display: flex;
+main{
+        overflow: auto;
+        background: lightgreen;
+        flex-grow: 1;
+        padding-top: 8px;
+        padding-left: 16px;
+        margin-left: 4px;
+    }   
 aside {
     background: lightcyan;
     width: 150px;
     padding: 16px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    padding-top: 80px;
-
-    >h2 {
-        margin-bottom: 4px;
-    }
-
+    overflow: auto;
+    >h2 {margin-bottom: 4px;}
     >ol {
-        >li {
-            padding: 4px 0;
+    >li { padding: 4px 0;}
+        }
+    @media (max-width:500px) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding-top: 80px;
         }
     }
 }
