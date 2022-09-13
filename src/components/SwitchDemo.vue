@@ -1,7 +1,5 @@
 <template> 
-      <div>
-        Switch文档
-    </div>
+  
     <Switch v-model:value="bool" />
 </template>
 

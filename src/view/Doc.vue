@@ -15,8 +15,8 @@
                 </li>
                 <li>
                     <router-link to="/doc/tabs">Tabs</router-link>
-
                 </li>
+                
             </ol>
         </aside>
         <main><router-view/></main>
@@ -37,31 +37,33 @@ export default {
 
 <style lang="scss" scoped>
 .content{
-        height: 100vh;
-        display: flex;
-main{
-        overflow: auto;
-        background: lightgreen;
-        flex-grow: 1;
-        padding-top: 8px;
-        padding-left: 16px;
-        margin-left: 4px;
-    }   
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
 aside {
     background: lightcyan;
     width: 150px;
     padding: 16px;
-    overflow: auto;
     >h2 {margin-bottom: 4px;}
     >ol {
     >li { padding: 4px 0;}
         }
+        main{
+        background: rgb(245,245,245);
+        border-radius: 4px;
+        flex-grow: 1;
+        padding-left: 16px;
+        margin-left: 4px;
+        border-left: 1px solid #ccc;
+    }        
     @media (max-width:500px) {
+        main{
         position: fixed;
         left: 0;
         top: 0;
         padding-top: 80px;
         }
     }
+}
 }
 </style>

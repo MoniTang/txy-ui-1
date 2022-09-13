@@ -1,9 +1,8 @@
 <template>
     <div class="topnav">
-        <div class="logo" >LOGO</div>
+        <div class="logo" >TXY-UI</div>
         <ul class="menu">
-            <li>菜单1</li>
-            <li>菜单2</li>
+            <li>文档</li>
         </ul>
         <span class="toggleAside" @click="toggleAside"></span>
     </div>
@@ -32,7 +31,10 @@ export default {
     justify-content: center;
     align-items: center;
     position: relative;
+    
     z-index: 2;
+    box-shadow: 0px 1px 1px pink;
+    
     .logo {
         max-width: 6em;
         margin-right: auto;
