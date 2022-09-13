@@ -1,13 +1,12 @@
 <template>
  <button class="txy-button" 
  :class="classes"
- :disabled="disabled">
+>
  <span v-if="loading"
  class="txy-loadingIndicator"></span>
 <slot></slot>
  </button>
 </template>
-
 <script lang="ts">
     import { computed } from 'vue';
     export default {
@@ -20,20 +19,17 @@
                 type:String,
                 default:"normal"
             },
-            disabled:{
-                type:Boolean,
-                default:false
-            },
             loading:{
                 type:Boolean,
                 default:false
             }
+            
         },
         setup(props){
-            const {theme,size}=props
+            const {theme,size,color}=props
             const classes=computed(()=>{
             return {[`txy-theme-${theme}`]:theme,
-                    [`txy-size-${size}`]:size
+                    [`txy-size-${size}`]:size,
                 }
             })
             return {classes}
@@ -46,7 +42,7 @@
     $border-color:#d9d9d9;
     $color:#333;
     $blue:#40a9ff;
-    $radius:4px;
+    $radius:6px;
     .txy-button{
         box-sizing: border-box;
         height: $h;
@@ -59,7 +55,6 @@
         background: white;
         color: $color;
         border: 1px solid $border-color;
-        border-radius: $radius;
         box-shadow: 0 1px 0 fade-out(black,0.95);
         &+&{
             margin-left: 8px;
@@ -136,13 +131,17 @@
         }
         &.txy-size-small{
             font-size: 12px;
-            height: 24px;
+            height: 16px;
             padding: 0 6px;
+        }
+        &[round]{
+        border-radius: $radius;
         }
         &[disabled]{
             cursor: not-allowed;
             color: gray;
         }
+
         > .txy-loadingIndicator{
             width: 14px;
             height: 14px;
@@ -155,7 +154,6 @@
             animation: txy-spin 1s infinite linear;    
         }
     }
-
     @keyframes txy-spin{
         0%{transform:rotate(0deg)}
         100%{transform: rotate(365deg);}

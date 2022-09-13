@@ -19,7 +19,6 @@ export default {
 
 <style lang="scss" scoped>
 .banner {
-    border: 1px solid red;
     padding: 100px 0;
     display: flex;
     justify-content: center;
