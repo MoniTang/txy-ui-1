@@ -73,6 +73,46 @@
         &::-moz-focus-inner{
             border: 0;
         }
+        &.txy-theme-primary{
+            background:$blue;
+            color: white;
+            &:hover,&:focus{
+                background: lighten($blue
+                ,10%);
+            }
+        }
+        &.txy-theme-success{
+            background:green;
+            color: white;
+            &:hover,&:focus{
+                background: lighten(green
+                ,10%);
+            }
+        }
+        &.txy-theme-info{
+            background:gray;
+            color: white;
+            &:hover,&:focus{
+                background: lighten(gray
+                ,10%);
+            }
+        }
+        &.txy-theme-warning{
+            background:orange;
+            color: white;
+            &:hover,&:focus{
+                background: lighten(orange
+                ,10%);
+            }
+        }
+        &.txy-theme-danger{
+            background:red;
+            color: white;
+            &:hover,&:focus{
+                background: lighten(red
+                ,10%);
+            }
+        }
         &.txy-theme-link{
             border-color: transparent;
             box-shadow: none;
