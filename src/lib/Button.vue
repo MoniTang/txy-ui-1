@@ -38,7 +38,7 @@
 </script>
 
 <style lang="scss">
-    $h:32px;
+    $h:28px;
     $border-color:#d9d9d9;
     $color:#333;
     $blue:#40a9ff;
@@ -46,7 +46,7 @@
     .txy-button{
         box-sizing: border-box;
         height: $h;
-        padding: 0 12px;
+        padding: 0 8px;
         cursor: pointer;
         display: inline-flex;
         justify-content: center;

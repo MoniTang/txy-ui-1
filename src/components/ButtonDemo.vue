@@ -1,6 +1,7 @@
 <template>
 <div>Button 示例</div>
 
+<div class="txy-testButton">
 <ol>
     <li >
         <span>直角按钮</span>
@@ -21,21 +22,23 @@
         <Button theme="danger" round>危险按钮</Button>
     </li>
 </ol>
+</div>
+
  
-<ol>
+<div class="txy-testButton">
     <Button >按钮一</Button>
     <Button size="big">按钮二</Button>
     <Button size="small">按钮三</Button>
-</ol>
-<ol>
+</div>
+<div class="txy-testButton">
     <Button >按钮</Button>
     <Button disabled>禁止</Button>
-</ol>
+</div>
 
-<ol>
+<div class="txy-testButton">
     <Button loading>加载中...</Button>
     <Button >加载完毕</Button>
-</ol>
+</div>
 </template>
 
 <script lang="ts">
@@ -48,5 +51,22 @@ import Button from "../lib/Button.vue";
 </script>
 
 <style lang="scss" scoped>
+    .txy-testButton{
+        margin:8px;
+        border: 1px solid red;
+        padding: 4px;
+        border-radius: 4px;
+        background: white;
+        >ol {
+        >li { 
+            padding: 4px 0;
+            >span{
+                font-size: 12px;
+                margin-right: 8px;
+            }
+        }
+        }
+
+    }
 
 </style>

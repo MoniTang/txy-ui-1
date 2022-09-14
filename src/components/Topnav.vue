@@ -14,9 +14,8 @@ export default {
     setup() {
         const asideVisible = inject<Ref<boolean>>('asideVisible')
         const toggleAside = () => {
-            if (asideVisible !== undefined) {
+            console.log('hi');
                 asideVisible.value = !asideVisible.value
-            }
         }
         return { toggleAside }
     }
@@ -24,14 +23,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    	.topnav { 
+.topnav { 
 	background: pink;
-	position: relative;
     padding: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
     box-shadow: 0px 1px 1px pink;
 	.logo {
         max-width: 6em;
@@ -49,7 +51,7 @@ export default {
         display: none;
         width: 24px ;
         height: 24px;
-        background-color: red;
+        background: red;
         position: absolute;
         left :16px;
         top:50%;
@@ -62,43 +64,4 @@ export default {
 
     }
 }
-// .topnav {
-//     background: pink;
-//     padding: 16px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     position: relative;
-//     z-index: 2;
-//     box-shadow: 0px 1px 1px pink;
-    
-//     .logo {
-//         max-width: 6em;
-//         margin-right: auto;
-//     }
-//     .menu {
-//         display: flex;
-//         white-space: nowrap;
-//         flex-wrap: nowrap;
-//          >li {
-//             margin: 0 1em;
-//         }
-//     }
-//     .toggleAside{
-//         display: none;
-//         width: 24px ;
-//         height: 24px;
-//         background-color: red;
-//         position: absolute;
-//         left :16px;
-//         top:50%;
-//         transform: translateY(-50%);
-//     }
-//     @media (max-width:500px) {
-//         >.menu {display: none;}
-//         >.logo { margin: 0 auto; }
-//         >.toggleAside{display: inline-block;    }
-
-//     }
-// }
 </style>
