@@ -111,6 +111,7 @@
         &.txy-theme-link{
             border-color: transparent;
             box-shadow: none;
+            background: none;
             color: $blue;
             &:hover,&:focus{
                 color: lighten($blue,10%);
@@ -119,6 +120,7 @@
         &.txy-theme-text{
             border-color: transparent;
             box-shadow: none;
+            background: none;
             color: inherit;
             &:hover,&:focus{
                 background: darken(white,5%);
