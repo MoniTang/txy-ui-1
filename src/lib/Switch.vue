@@ -1,5 +1,5 @@
 <template>
- <button :class="{checked:value}" @click="toggleSwitch"><span></span></button>
+ <button  class="txy-switch"  :class="{'txy-checked':value}" @click="toggleSwitch"><span></span></button>
 </template>
 
 <script lang="ts">
@@ -14,19 +14,17 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
     $h:22px;
     $h2:$h - 4px;
-button{
+.txy-switch{
     height: $h;
     width: $h*2;
     border: none;
     background:gray;
     border-radius: $h/2;
     position: relative;
-
-}
-span{
+    span{
     position: absolute;
     top: 2px;
     left: 2px;
@@ -36,11 +34,10 @@ span{
     border-radius: $h2/2;
     transition: left 250ms;
   }
+}
+.txy-switch.txy-checked{background: blue;
+    span{left: calc(100% - #{$h2} - 2px);}
+    }
 
-button.checked{
-    background: blue;
->span{
-    left: calc(100% - #{$h2} - 2px);
-}
-}
+ 
 </style>
