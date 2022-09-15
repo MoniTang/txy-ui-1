@@ -2,7 +2,7 @@
 <div>Tab示例</div>
 <Tabs v-model:selected="x">
     <Tab title="导航1">1</Tab>
-    <Tab title="导航2">2</Tab>
+    <Tab title="导航23333333333333">2</Tab>
 </Tabs>
 </template>
 
