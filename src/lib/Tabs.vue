@@ -26,15 +26,13 @@ import Tab from './Tab.vue'
         const selectItem=ref<HTMLDListElement>(null)
         const indicator=ref<HTMLDivElement>(null)
         const container=ref<HTMLDivElement>(null)
-       onMounted(()=>{
-        watchEffect(()=>{
-            const {width}=selectItem.value.getBoundingClientRect()
-            indicator.value.style.width=width+'px'
-            const {left:left1}=container.value.getBoundingClientRect()
-            const {left:left2}=selectItem.value.getBoundingClientRect()
-            const left=left2-left1
-            indicator.value.style.left=left+'px'
-        })
+        onMounted(()=>{
+            watchEffect(()=>{
+                const {width,left:left2}=selectItem.value.getBoundingClientRect()
+                indicator.value.style.width=width+'px'
+                const {left:left1}=container.value.getBoundingClientRect()
+                indicator.value.style.left=(left2-left1)+'px'
+            })
        })
         const defaults=context.slots.default()
             defaults.forEach((tag) => {
