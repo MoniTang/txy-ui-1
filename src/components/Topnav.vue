@@ -1,8 +1,8 @@
 <template>
     <div class="topnav">
-        <div class="logo" ><svg class="icon" aria-hidden="true">
+        <router-link  to="/" class="logo" ><svg class="icon" aria-hidden="true">
     <use xlink:href="#icon-logo"></use>
-</svg> Txy-ui</div>
+</svg> Txy-ui</router-link> 
         <ul class="menu">
           <router-link to="/doc">文档</router-link>
         </ul>
@@ -45,7 +45,7 @@ export default {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 20;
 	.logo {
         max-width: 6em;
         margin-right: auto;
