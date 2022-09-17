@@ -1,9 +1,8 @@
-import * as fs from 'fs';
-import  path from 'path'
+import path from 'path'
+import  * as fs from 'fs'
 import {marked} from 'marked'
-
 const mdToJs = str => {
-const content = JSON.stringify(marked(str))
+  const content = JSON.stringify(marked(str))
   return `export default ${content}`
 }
 
