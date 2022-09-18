@@ -1,14 +1,10 @@
 <demo>
-    常规使用
+    一键打开
 </demo>
 <template>
-       <div>
-        <Button theme="text" @click="toggleDialog">对话框</Button>
-        <Dialog v-model:visible="visibleDialog" :ok="ok" :cancel="cancel">
-            <template v-slot:title><p>标题</p></template>
-            <template v-slot:content><p>第一行字</p></template>
-        </Dialog>
-       </div>
+        <div>
+            <Button @click="showDialog">show</Button>
+        </div>
 </template>
 <script lang="ts">
     import Dialog from '../lib/Dialog.vue';
