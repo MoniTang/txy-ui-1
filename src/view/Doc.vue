@@ -93,7 +93,7 @@ export default {
                 color:#00bdc6;
                 background: #fff;
                 padding-left: 48px ;
-                transform: left 250ms;
+                transition: all 250ms;
             }
         }
         }
