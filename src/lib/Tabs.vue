@@ -28,8 +28,9 @@ import Tab from './Tab.vue'
         const container=ref<HTMLDivElement>(null)
         onMounted(()=>{
             watchEffect(()=>{
-                const {width,left:left2}=selectItem.value.getBoundingClientRect()
+                const {width}=selectItem.value.getBoundingClientRect()
                 indicator.value.style.width=width+'px'
+                const {left:left2}=selectItem.value.getBoundingClientRect()
                 const {left:left1}=container.value.getBoundingClientRect()
                 indicator.value.style.left=(left2-left1)+'px'
             })
