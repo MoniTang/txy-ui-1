@@ -77,6 +77,7 @@ export default {
     	padding-top:64px;
         height: 100vh;
         overflow: auto;
+        z-index: 1;
 		>h2 {
             margin-bottom: 4px;
             padding: 0 16px; 
