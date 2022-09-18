@@ -34,10 +34,15 @@
     border-radius: $h2/2;
     transition: left 250ms;
   }
+  &[disabled]{
+            cursor: not-allowed;
+            color: gray;
+        }
 }
 .txy-switch.txy-checked{background: blue;
     span{left: calc(100% - #{$h2} - 2px);}
     }
+     
 
  
 </style>
