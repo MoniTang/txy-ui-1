@@ -15,6 +15,7 @@
 </script>
 
 <style lang="scss">
+    @use "sass:math";
     $h:22px;
     $h2:$h - 4px;
 .txy-switch{
@@ -22,7 +23,7 @@
     width: $h*2;
     border: none;
     background:gray;
-    border-radius: $h/2;
+    border-radius: math.div($h, 2);;
     position: relative;
     span{
     position: absolute;
@@ -31,7 +32,7 @@
     height: $h2;
     width: $h2;
     background: white;
-    border-radius: $h2/2;
+    border-radius: math.div($h2, 2);;
     transition: left 250ms;
   }
   &[disabled]{
