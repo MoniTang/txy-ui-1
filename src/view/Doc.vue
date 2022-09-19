@@ -102,8 +102,8 @@ export default {
 	main {
 		flex-grow: 1;
         padding: 16px;
-		// background: rgb(245,245,245);
 		overflow: auto;
+
     }
  }
 }

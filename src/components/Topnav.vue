@@ -37,6 +37,7 @@ export default {
 
 <style lang="scss" scoped>
 .topnav { 
+    background: linear-gradient(45deg, rgba(255,241,235,1) 0%, rgba(209,253,255,1) 100%);
     padding: 16px;
     display: flex;
     justify-content: center;
