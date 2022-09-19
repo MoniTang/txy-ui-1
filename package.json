@@ -1,6 +1,6 @@
 {
-  "name": "txy-ui",
-  "version": "0.0.4",
+  "name": "txy-ui-1",
+  "version": "0.0.1",
   "files": [
     "dist/lib/*"
   ],
