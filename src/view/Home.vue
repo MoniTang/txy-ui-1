@@ -4,7 +4,7 @@
     <div class="banner">
         <h1>Txy-ui</h1>
         <h2>一款简单的UI</h2>
-        <p class="actions"><a href="">Github</a>
+        <p class="actions"><a href="https://github.com/MoniTang/txy-ui-1">Github</a>
             <router-link to="/doc">开始</router-link>
         </p>
     </div>
